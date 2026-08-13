@@ -29,6 +29,12 @@ public class Cuentas {
         saldo = saldo + cantidad;
     }
     public void retirar(double cantidad){
-        saldo=saldo-cantidad;
+    if (cantidad <= saldo) {
+        saldo = saldo - cantidad;
+        System.out.println("Retiro realizado correctamente.");
+    } else {
+        System.out.println("Saldo insuficiente.");
     }
+}
+    
 }
